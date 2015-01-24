@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="Together">
+<head>
+<link rel="stylesheet" type="text/css" href="lib/lumx/dist/css/lumx.css">
+<link rel="stylesheet" type="text/css" href="material-design-iconic-font/css/material-design-iconic-font.css">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="stylesheet" type="text/css" href="style/nav_bar.css">
+
+  <title>Together</title>
+</head>
+<body ng-controller="AppController">
+  <div ng-class="{show: show, hidden: !show}" id="overlay" ng-click="toggle()"></div>
+  <div ng-class="{show: show, hidden: !show}" id="side-nav">
+   <div class="banner">  
+    <h1 class="bgc-indigo-500">Profile</h1>
+   </div>
+
+   <div id="user-picture"></div>
+   <form novalidate class="login">
+     <input type="text" ng-model="user.username" placeholder="Username"/>
+     <input type="email" ng-model="user.email" placeholder="Email"/>
+     <input  type="text" ng-model="user.password" placeholder="Password"/>
+   </form>
+   <button ng-click="checkLogin()" class="btn btn--m bgc-indigo-500">Here</button>
+
+
+  </div>
+
+  <div ui-view></div>
+  
+  <button id="nav-button" ng-click="toggle()" class="btn btn--l bgc-indigo-500" lx-ripple><i class="md md-view-headline"></i></button>
+  
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript" src="lib/ace-builds/src-min-noconflict/ace.js"></script>
+<script type="text/javascript" src="lib/angular-ui-ace/ui-ace.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+<script src="home/home.js"></script>
+<script src="text_editor/texteditor.js"></script>
+</body>
+</html>

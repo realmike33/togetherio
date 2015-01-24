@@ -1,0 +1,43 @@
+#side-nav{
+	position: fixed;
+	background-color: white;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+	width: 0vw;
+	height: 100vh;
+	transition: 0.5s width;
+}
+#side-nav.hidden{
+	display: none;
+	width: 0vw;
+}
+#side-nav.show{
+	width: 20vw;
+	display: block;
+}
+#overlay{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	opacity: 0;
+	display: none;
+	height: 100vh;
+	background-color: black;
+	transition: 3s opacity;
+	z-index: 8888;
+}
+#overlay.hidden{
+	opacity: 0;
+	display: none;
+}
+#overlay.show{
+	opacity: 0.5;
+	display: block;
+}
+#nav-button{
+	background-color: 
+}
+
+
